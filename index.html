@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="cgpastyle.css">
+    <script src="gpa.js"></script>
+</head>
+<body>
+    <h1>CGPA CALCULATOR</h1>
+    <h2>DEPARTMENT OF INFORMATION TECHNOLOGY</h2>
+    
+    <div class="semester">
+        <h1 id="semester">SEMESTER 1</h1>
+        <div class="subject">
+        <label for="english">Communicative English</label>
+        <select id="english1grade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="english1credits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="3">3</option>
+        </select>
+        </div>
+        <div class="subject">
+            <label for="maths">Matrices and Differential Calculus</label>
+            <select id="mathsgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+            </select>
+            <select id="mathscredits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="4">4</option>
+            </select>
+        </div>
+        <div class="subject">
+            <label for="physics">Engineering Physics 1</label>
+            <select id="physics1grade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+            </select>
+            <select id="physics1credits">
+                <option value="" disabled selected>Select Your Credits</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="subject">
+            <label for="chemistry">Engineering Chemistry 1</label>
+            <select id="chemistrygrade">
+                <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+            </select>
+            <select id="chemistrycredits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="3">3</option>
+            </select>
+        </div>
+        <div class="subject">
+            <label for="python">Problem Solving and Python Programming</label>
+            <select id="pythongrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+            </select>
+            <select id="pythoncredits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="4">4</option>
+            </select>
+        </div>
+        <div class="subject">
+            <label for="engineering graphics">Engineering Graphics</label>
+            <select id="eggrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+            </select>
+            <select id="egcredits">
+                <option value="" disabled selected>Select Your Credits</option>
+            <option value="4">4</option>
+            </select>
+        </div>
+        <div class="subject">
+            <label for="bsc">Basic Sciences Laboratory (Physics & Chemistry)</label>
+            <select id="bscgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+            </select>
+            <select id="bsccredits">
+                <option value="" disabled selected>Select Your Credits</option>
+            <option value="2">2</option>
+            </select>
+        </div>
+        <div class="subject">
+            <label for="epl">Engineering Practices Laboratory</label>
+            <select id="eplgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+            </select>
+            <select id="eplcredits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="2">2</option>
+            </select><br>
+            <button onclick="getgpa1()">Get Your Gpa</button>
+            <p id="gpa1"></p>
+        </div>
+    </div>
+    
+    <br><br>
+    <div class="semester">
+        <h1 id="semester">SEMESTER 2</h1>
+        <div class="subject">
+            <label for="english2">Technical English</label>
+            <select id="english2grade">
+                <option value="" disabled selected>Select Your Grade</option>
+                <option value="10">O (10)</option>
+                <option value="9">A+ (9)</option>
+                <option value="8">A (8)</option>
+                <option value="7">B+ (7)</option>
+                <option value="6">B (6)</option>
+                <option value="5">C (5)</option>
+                </select>
+                <select id="english2credits">
+                <option value="" disabled selected>Select Your Credits</option>
+                <option value="3">3</option>
+                </select>
+        </div>
+        <div class="subject">
+            <label for="maths2">Vector Complex and Complex Integration</label>
+            <select id="maths2grade">
+                <option value="" disabled selected>Select Your Grade</option>
+                <option value="10">O (10)</option>
+                <option value="9">A+ (9)</option>
+                <option value="8">A (8)</option>
+                <option value="7">B+ (7)</option>
+                <option value="6">B (6)</option>
+                <option value="5">C (5)</option>
+            </select>
+            <select id="maths2credits">
+                <option value="" disabled selected>Select Your Credits</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <div class="subject">
+            <label for="physics2">Engineering Physics 2</label>
+            <select id="physics2grade">
+                <option value="" disabled selected>Select Your Grade</option>
+                <option value="10">O (10)</option>
+                <option value="9">A+ (9)</option>
+                <option value="8">A (8)</option>
+                <option value="7">B+ (7)</option>
+                <option value="6">B (6)</option>
+                <option value="5">C (5)</option>
+            </select>
+            <select id="physics2credits">
+                <option value="" disabled selected>Select Your Credits</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="subject">
+            <label for="beeie">Basic Electrical and Instrumentation Engineering</label>
+            <select id="beeiegrade">
+                <option value="" disabled selected>Select Your Grade</option>
+                <option value="10">O (10)</option>
+                <option value="9">A+ (9)</option>
+                <option value="8">A (8)</option>
+                <option value="7">B+ (7)</option>
+                <option value="6">B (6)</option>
+                <option value="5">C (5)</option>
+            </select>
+            <select id="beeiecredits">
+                <option value="" disabled selected>Select Your Credits</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="subject">
+            <label for="ite">Information Technology Essentials</label>
+            <select id="itegrade">
+                <option value="" disabled selected>Select Your Grade</option>
+                <option value="10">O (10)</option>
+                <option value="9">A+ (9)</option>
+                <option value="8">A (8)</option>
+                <option value="7">B+ (7)</option>
+                <option value="6">B (6)</option>
+                <option value="5">C (5)</option>
+            </select>
+            <select id="itecredits">
+                <option value="" disabled selected>Select Your Credits</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="subject">
+            <label for="prc">Programming in C</label>
+            <select id="prcgrade">
+                <option value="" disabled selected>Select Your Grade</option>
+                <option value="10">O (10)</option>
+                <option value="9">A+ (9)</option>
+                <option value="8">A (8)</option>
+                <option value="7">B+ (7)</option>
+                <option value="6">B (6)</option>
+                <option value="5">C (5)</option>
+            </select>
+            <select id="prccredits">
+                <option value="" disabled selected>Select Your Credits</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="subject">
+            <label for="itelab">Information Technology Essential Laboratory</label>
+            <select id="itelabgrade">
+                <option value="" disabled selected>Select Your Grade</option>
+                <option value="10">O (10)</option>
+                <option value="9">A+ (9)</option>
+                <option value="8">A (8)</option>
+                <option value="7">B+ (7)</option>
+                <option value="6">B (6)</option>
+                <option value="5">C (5)</option>
+            </select>
+            <select id="itelabcredits">
+                <option value="" disabled selected>Select Your Credits</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <div class="subject">
+            <label for="prclab">Programming in C Laboratory</label>
+            <select id="prclabgrade">
+                <option value="" disabled selected>Select Your Grade</option>
+                <option value="10">O (10)</option>
+                <option value="9">A+ (9)</option>
+                <option value="8">A (8)</option>
+                <option value="7">B+ (7)</option>
+                <option value="6">B (6)</option>
+                <option value="5">C (5)</option>
+            </select>
+            <select id="prclabcredits">
+                <option value="" disabled selected>Select Your Credits</option>
+                <option value="2">2</option>
+            </select><br>
+            <button onclick="getgpa2()">Get Your GPA</button>
+            <p id="gpa2"></p>
+        </div>
+</div><br><br>
+<div class="semester">
+    <h1 id="semester">SEMESTER 3</h1>
+    <div class="subject">
+        <label for="maths3">Discrete Mathematics and Applications</label>
+        <select id="dmagrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="dmacredits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+    <div class="subject">
+        <label for="dlc">Digital Logic Circuits</label>
+        <select id="dlcgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="dlccredits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+    <div class="subject">
+        <label for="ca">Computer Architecture</label>
+        <select id="cagrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="cacredits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+    <div class="subject">
+        <label for="dsc">Data Structures using C</label>
+        <select id="dscgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="dsccredits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+    <div class="subject">
+        <label for="oops">Object Oriented Programming</label>
+        <select id="oopsgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="oopscredits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+    <div class="subject">
+        <label for="poc">Principles of Communication</label>
+        <select id="pocgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="poccredits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="3">3</option>
+        </select>
+</div>
+<div class="subject">
+    <label for="dsclab">Data Strutures using C Laboratory</label>
+    <select id="dsclabgrade">
+        <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+    </select>
+    <select id="dsclabcredits">
+        <option value="" disabled selected>Select Your Credits</option>
+        <option value="2">2</option>
+    </select>
+</div>
+<div class="subject">
+    <label for="dlclab">Digital Logic Circuits Laboratory</label>
+    <select id="dlclabgrade">
+        <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+    </select>
+    <select id="dlclabcredits">
+        <option value="" disabled selected>Select Your Credits</option>
+        <option value="2">2</option>
+    </select><br>
+    <button onclick="getgpa3()">Get Your GPA</button>
+    <p id="gpa3"></p>
+</div>
+</div>
+<br><br>
+<div class="semester">
+    <h1 id="semester">SEMESTER 4</h1>
+    <div class="subject">
+        <label for="pqt">PROBABILITY AND QUEUING THEORY</label>
+        <select id="pqtgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="pqtcredits">
+            <option value="" disabled selected>Select Your Credits</option>
+        <option value="4">4</option>
+        </select>
+    </div>
+    <div class="subject">
+        <label for="daa">DESIGN AND ANALYSIS OF ALGORITHMS</label>
+        <select id="daagrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="daacredits">
+            <option value="" disabled selected>Select Your Credits</option>
+        <option value="3">3</option>
+        </select>
+    </div>
+    <div class="subject">
+        <label for="dbms">DATABASE MANAGEMENT SYSTEMS</label>
+        <select id="dbmsgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="dbmscredits">
+            <option value="" disabled selected>Select Your Credits</option>
+        <option value="3">3</option>
+        </select>
+    </div>
+    <div class="subject">
+        <label for="os">OPERATING SYSTEMS</label>
+        <select id="osgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+            <select id="oscredits">
+                <option value="" disabled selected>Select Your Credits</option>
+                <option value="3">3</option>
+            </select>
+    </div>
+    <div class="subject">
+        <label for="se">SOFTWARE ENGINEERING</label>
+        <select id="segrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="secredits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+    <div class="subject">
+        <label for="evs">ENVIRONMENTAL SCIENCES</label>
+        <select id="evsgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="evscredits">
+            <option value="" disabled selected>Select Your Credits</option>
+            <option value="0">0</option>
+        </select>
+    </div>
+    <div class="subject">
+        <label for="oslab">OPERATING SYSTEM LABORATORY</label>
+        <select id="oslabgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="oslabcredits">
+            <option value="" disabled selected>Select Your Credits</option>
+        <option value="2">2</option>
+        </select>
+    </div>
+    <div class="subject">
+        <label for="dbmslab">DATABASE MANAGEMENT SYSTEM LABORATORY</label>
+        <select id="dbmslabgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="dbmslabcredits">
+            <option value="" disabled selected>Select Your Credits</option>
+        <option value="2">2</option>
+        </select>
+    </div>
+    <div class="subject">
+        <label for="miniproject">MINI PROJECT</label>
+        <select id="miniprojectgrade">
+            <option value="" disabled selected>Select Your Grade</option>
+            <option value="10">O (10)</option>
+            <option value="9">A+ (9)</option>
+            <option value="8">A (8)</option>
+            <option value="7">B+ (7)</option>
+            <option value="6">B (6)</option>
+            <option value="5">C (5)</option>
+        </select>
+        <select id="miniprojectcredits">
+            <option value="" disabled selected>Select Your Credits</option>
+        <option value="1">1</option>
+        </select><br>
+        <button onclick="getgpa4()">Get Your GPA</button>
+        <p id="gpa4"></p>
+    </div>
+</div>
+<div class="cgpacalculator">
+    <h3>Fill Your GPA to View your CGPA</h3>
+    <div class="inputgpa">
+        <input type="text" placeholder="GPA 1" id="int1">
+        <input type="text" placeholder="GPA 2" id="int2">
+        <input type="text" placeholder="GPA 3" id="int3">
+        <input type="text" placeholder="GPA 4" id="int4">
+    </div>
+    <button onclick="calculatecgpa()">Get Your CGPA</button>
+    <p id="cgparesult"></p>
+</div>
+</body>
+</html>
